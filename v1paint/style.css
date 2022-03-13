@@ -1,0 +1,231 @@
+/* 版面設定 */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.4s all linear;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+/* 第一區 header index*/
+header{
+    font-size: 20px;
+    position:fixed;
+    top:0; left: 0; right:0;
+    z-index: 100;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    background: #aaa;
+    box-shadow: 10px 1rem 1rem rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+header img{
+    width:50px;
+    height: 40px;
+    padding-bottom: -10px;
+    filter: saturate(8);
+}
+header .navbar a{
+    font-size: 18px;
+    font-weight: normal;
+    color:rgb(9,152,152);
+    padding-left:10px;
+}
+header .logo{
+    font-size: 18px;
+    font-weight: normal;
+    color:rgb(9,152,152);
+}
+header .navbar a:hover{
+    font-size: 20px;
+    font-weight: 900;
+    color:lightgreen;
+    margin-left: 10px;
+    transition: 1s;
+    background-color: white;
+    padding:20px 10px 20px 10px;
+}
+#menu-bar{
+    font-size: 25px;
+    cursor: pointer;
+    color:rgb(9,152,152);
+    border:1px solid rgb(9,152,152);
+    border-radius: 5px;
+    padding:8px;
+    display:none;
+    text-decoration: none;
+}
+.nav-tabs .nav-link.active{
+    color:white;
+    background-color: rgb(136, 25, 247);
+    border-color:black;
+}
+.nav-link{
+    font-size: 20px;
+}
+/* 第二區 首頁 */
+section{
+    padding:10px;
+}
+.home{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    min-height: 500px;
+    align-items: center;
+    background: url(../father-painting/images/the-town-bg-01.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.content{
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.content h2{
+    font-size: 50px;
+    color: lightcoral;
+}
+.content h3{
+    font-size: 40px;
+    color: lightcoral;
+}
+.content p{
+    font-size: 20px;
+    color: lightcoral;
+    padding:10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* 第一區header introduce */
+.introduce{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    min-height: 500px;
+    align-items: center;
+    background: url(../father-painting/images/slide1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.introduce-content{
+    padding: 30px;
+    margin-top: 30px;
+
+}
+.introduce-content h3{
+    font-size: 50px;
+    color: lightcoral;
+}
+.introduce-content p{
+    font-size: 20px;
+    color: lightcoral;
+    padding:10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/* artist */
+.artist-first{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    min-height: 500px;
+    align-items: center;
+    background: url(../father-painting/images/the-town-bg-01.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 20px 0;
+    
+}
+.artist-second{
+    padding-top: 20px;
+}
+.artist-second .wrap{
+    display: flex;
+}
+.artist-second .item{
+    width:50%;
+}
+.artist-second .item img{
+    width:70%;    
+}
+/* .artist-second .item img{
+    width:400px;
+    height:500px;  
+} */
+.artist-second .artist-text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+}
+.artist-second .work-text p{
+    font-size: 20px;
+    /* margin-top: 10px; */
+    padding: 20px;
+    padding-top: 20px;
+}
+.artist-second .work-text h2{
+    font-size: 45px;
+    padding-bottom: 10px;
+}
+.artist-second .work-text .work-pic{
+    width:1000px;
+    text-align: center;
+    padding-left: 120px;
+}
+
+
+/* RWD手機板 */
+@media(max-width:600px){
+    #menu-bar{
+        display:initial;
+        position: absolute;
+        right:10px;
+        top:10px;
+    }
+    header .navbar{
+        position: absolute;
+        top:80px; left:0px;right:0px;
+        background-color: lightgreen;
+        border-top:3px solid grey;
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        /* 隱藏下拉選單 */
+        clip-path:polygon(0 0, 100% 0, 100% 0, 0 0 );
+    }
+    header .navbar a{
+        display:block;
+        font-size:22px;
+        font-weight: normal;
+        color:rgb(20,80,80);
+        margin:10px; padding:6px;
+        border-left: 3px solid grey;
+        background-color: white;
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+        padding:10px;
+    }
+    .artist-second .work-text h2{
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    .artist-second .work-text .work-pic{
+        width:500px;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
