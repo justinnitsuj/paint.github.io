@@ -80,6 +80,7 @@ section{
     min-height: 500px;
     align-items: center;
     background: url(../v1paint/images/the-town-bg-01.jpg) no-repeat;
+    
     background-size: cover;
     background-position: center;
 }
@@ -183,6 +184,25 @@ section{
     width:1000px;
     text-align: center;
     padding-left: 120px;
+}
+/* department */
+.department{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    min-height: 500px;
+    align-items: center;
+    background: url(../chientienweb/images/the-town-bg-01.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.department-content{
+    padding: 20px 0;
+    max-width: 1200px;
+}
+.department-content p{
+    font-size: 20px;
+    padding:10px;
 }
 
 
